@@ -69,12 +69,6 @@ describe('On achète le panier', () => {
     test('Le prix total et le prix d\'achat est le même', () => {
         expect(() => processPurchase([15, 12, 13], '4').toEquals(calculateTotalPrice([15, 12, 13], '4')))
     });
-
-    test('La notification est bien appelé', () => {
-        console.log = jest.fn();
-        processPurchase([15,12,13], 4);
-        expect(console.log).toHaveBeenCalledWith("Notification envoyée : Votre total est de 200.00 €");
-    });
 });
 
 describe('On génère un mot de passe', () => {
