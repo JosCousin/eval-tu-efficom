@@ -71,10 +71,6 @@ function generatePassword(length, options = { uppercase: true, numbers: true, sp
     if (options.uppercase) charPool += uppercaseChars;
     if (options.numbers) charPool += numberChars;
     if (options.specialChars) charPool += specialChars;
-    
-    if (charPool.length === 0) {
-        throw new Error('At least one character type must be enabled');
-    }
 
     let password = '';
     for (let i = 0; i < length; i++) {
